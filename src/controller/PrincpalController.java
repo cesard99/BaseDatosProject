@@ -9,7 +9,6 @@ public class PrincpalController {
     @FXML
     private Button btn1;
 
-
     public void setStage(Stage stage) {
         this.stage=stage;
     }
