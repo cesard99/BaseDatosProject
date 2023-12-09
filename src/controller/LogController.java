@@ -2,6 +2,7 @@ package controller;
 import javafx.scene.image.Image;
 import java.io.IOException;
 import javafx.scene.Scene;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
@@ -30,6 +31,19 @@ public class LogController{
         stage=primaryStage;
     }
 
+    public Stage getStage(){
+        
+        return this.stage ;
+    }
+    public void show() {
+        stage.show();
+    }
+
+     @FXML
+    void closeWindows(ActionEvent event) {
+        stage.close();
+    }
+
     @FXML
     void showWindowsPrincipal() throws IOException {
         try{
@@ -38,17 +52,19 @@ public class LogController{
         Parent root = loader.load();
         Scene scene = new Scene(root);
         Stage stage = new Stage ();
+        PrincpalController controller = loader.getController();
         stage.setScene(scene); 
         stage.setTitle("Ventana Principal");
         Image icon = new Image ("/img/bandera.png");
         stage.getIcons().add(icon);    
         String css=this.getClass().getResource("/visual/application.css").toExternalForm();
         scene.getStylesheets().add(css);
+        controller.init(stage , this );
         stage.show();
         this.stage.close();
         }
         
-        /*esto es para la prueba del commit */
+        
         
         }catch(Exception e){
             e.printStackTrace();
@@ -59,7 +75,7 @@ public class LogController{
    
       public boolean verify(){
         boolean bandera = false;
-        if(txtFieldName.getText().equals("Cesar") || txtFieldName.getText().equals("Raul")
+        if(txtFieldName.getText().equals("Cesar")|| txtFieldName.getText().equals("Raul")
         && txtFieldPass.getText().equals("cesar12") || txtFieldPass.getText().equals("Raul12"))
         bandera=true;
         else
@@ -67,6 +83,10 @@ public class LogController{
 
         return bandera;
       }
+
+    
+
+
 
 
 }

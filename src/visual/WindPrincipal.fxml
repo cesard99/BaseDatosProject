@@ -4,12 +4,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PrincpalController">
    <left>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="400.0" prefWidth="166.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btn1" layoutX="63.0" layoutY="50.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="99.0" text="Button" />
+            <Button id="BtnPrincipal" fx:id="btn1" layoutY="2.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="166.0" text="Button" />
+            <Button id="BtnPrincipal" fx:id="btn11" layoutX="1.0" layoutY="68.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="166.0" text="Button" />
+            <Button id="BtnPrincipal" fx:id="btn12" layoutY="134.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="166.0" text="Button" />
+            <Button id="BtnPrincipal" fx:id="btn13" layoutY="200.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="166.0" text="Button" />
+            <Button id="BtnPrincipal" fx:id="btn14" layoutY="266.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="166.0" text="Button" />
+            <Button id="BtnPrincipal" fx:id="btn15" layoutX="1.0" layoutY="332.0" mnemonicParsing="false" onAction="#showLogin" prefHeight="65.0" prefWidth="166.0" text="Disconect" />
          </children>
       </AnchorPane>
    </left>

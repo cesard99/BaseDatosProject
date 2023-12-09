@@ -38,7 +38,7 @@
             <TextField fx:id="txtFieldName" layoutX="81.0" layoutY="197.0" promptText="User Name" />
             <PasswordField fx:id="txtFieldPass" layoutX="83.0" layoutY="285.0" promptText="Password" />
             <Button fx:id="btnAccept" layoutX="83.0" layoutY="371.0" mnemonicParsing="false" onAction="#showWindowsPrincipal" prefHeight="30.0" prefWidth="139.0" text="Accept" />
-            <Button fx:id="btnCancel" layoutX="127.0" layoutY="418.0" mnemonicParsing="false" text="Cancel" />
+            <Button fx:id="btnCancel" layoutX="127.0" layoutY="418.0" mnemonicParsing="false" onAction="#closeWindows" text="Cancel" />
             <ImageView fitHeight="153.0" fitWidth="160.0" layoutX="76.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../img/accs.png" />
