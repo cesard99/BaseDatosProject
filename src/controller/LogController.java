@@ -48,7 +48,7 @@ public class LogController{
     void showWindowsPrincipal() throws IOException {
         try{
             if(verify()){
-        FXMLLoader loader =new FXMLLoader(getClass().getResource("/visual/WindPrincipal.fxml"));
+        FXMLLoader loader =new FXMLLoader(getClass().getResource("/View/WindPrincipal.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
         Stage stage = new Stage ();
@@ -57,7 +57,7 @@ public class LogController{
         stage.setTitle("Ventana Principal");
         Image icon = new Image ("/img/bandera.png");
         stage.getIcons().add(icon);    
-        String css=this.getClass().getResource("/visual/application.css").toExternalForm();
+        String css=this.getClass().getResource("/style/stylePrinc.css").toExternalForm();
         scene.getStylesheets().add(css);
         controller.init(stage , this );
         stage.show();
