@@ -1,6 +1,5 @@
 import java.io.IOException;
 
-
 import controller.LogController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -16,7 +15,7 @@ public void start(Stage primaryStage)throws IOException{
     try {
         
         FXMLLoader loader =new FXMLLoader();
-        loader.setLocation(main.class.getResource("/View/WindowLog.fxml"));
+        loader.setLocation(main.class.getResource("/visual/WindowLog.fxml"));
         Parent root= loader.load();
         Scene scene=new Scene(root);
         primaryStage.setScene(scene);
@@ -24,7 +23,7 @@ public void start(Stage primaryStage)throws IOException{
         primaryStage.setTitle("Ventana Login");
         Image icon = new Image("/img/iconLog.png");
         primaryStage.getIcons().add(icon);
-        String css=this.getClass().getResource("/style/styleLogin.css").toExternalForm();
+        String css=this.getClass().getResource("/visual/application.css").toExternalForm();
         scene.getStylesheets().add(css);
         controller.setStage(primaryStage);
 
