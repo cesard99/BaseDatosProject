@@ -34,6 +34,7 @@ public class PrincpalController {
     @FXML
     void showLogin(ActionEvent event) throws Exception {
         controllerLog.show();
+        controllerLog.ocultarLbl();
         stage.close();
         
     }

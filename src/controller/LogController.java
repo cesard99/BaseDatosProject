@@ -5,6 +5,7 @@ import javafx.scene.Scene;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -19,6 +20,12 @@ public class LogController{
 
     @FXML
     private PasswordField txtFieldPass;
+
+    @FXML
+    private Label lblErrorPass;
+
+    @FXML
+    private Label lblErrorUssers;
 
     @FXML
     private Button btnAccept;
@@ -40,12 +47,18 @@ public class LogController{
     }
 
      @FXML
-    void closeWindows(ActionEvent event) {
+    public  void closeWindows(ActionEvent event) {
+        
         stage.close();
+        
+    }
+     public void ocultarLbl(){
+        lblErrorPass.setVisible(false);
+        lblErrorUssers.setVisible(false);
     }
 
     @FXML
-    void showWindowsPrincipal() throws IOException {
+   public  void showWindowsPrincipal() throws IOException {
         try{
             if(verify()){
         FXMLLoader loader =new FXMLLoader(getClass().getResource("/visual/WindPrincipal.fxml"));
@@ -63,6 +76,8 @@ public class LogController{
         stage.show();
         this.stage.close();
         }
+            
+        
         
         
         
@@ -75,11 +90,13 @@ public class LogController{
    
       public boolean verify(){
         boolean bandera = false;
-        if(txtFieldName.getText().equals("Cesar")|| txtFieldName.getText().equals("Raul")
-        && txtFieldPass.getText().equals("cesar12") || txtFieldPass.getText().equals("Raul12"))
-        bandera=true;
-        else
-        bandera=false;
+        if(txtFieldName.getText().equals("Cesar")|| txtFieldName.getText().equals("Raul")){
+            if(txtFieldPass.getText().equals("cesar123") || txtFieldPass.getText().equals("raul123")){
+                bandera=true;
+            } lblErrorPass.setVisible(true);
+        }lblErrorUssers.setVisible(true);
+        
+        
 
         return bandera;
       }

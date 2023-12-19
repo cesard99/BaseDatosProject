@@ -26,6 +26,7 @@ public void start(Stage primaryStage)throws IOException{
         String css=this.getClass().getResource("/visual/application.css").toExternalForm();
         scene.getStylesheets().add(css);
         controller.setStage(primaryStage);
+        
 
         
         primaryStage.show();
