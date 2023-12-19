@@ -15,7 +15,7 @@ public void start(Stage primaryStage)throws IOException{
     try {
         
         FXMLLoader loader =new FXMLLoader();
-        loader.setLocation(main.class.getResource("/visual/WindowLog.fxml"));
+        loader.setLocation(main.class.getResource("/view/WindowLog.fxml"));
         Parent root= loader.load();
         Scene scene=new Scene(root);
         primaryStage.setScene(scene);
@@ -23,7 +23,7 @@ public void start(Stage primaryStage)throws IOException{
         primaryStage.setTitle("Ventana Login");
         Image icon = new Image("/img/iconLog.png");
         primaryStage.getIcons().add(icon);
-        String css=this.getClass().getResource("/visual/application.css").toExternalForm();
+        String css=this.getClass().getResource("/style/styleLog.css").toExternalForm();
         scene.getStylesheets().add(css);
         controller.setStage(primaryStage);
         
